@@ -7,7 +7,12 @@ public class Appliance {
 
     @Override
     public String toString() {
-        return "Appliance: " + applianceList;
+        StringBuilder sb = new StringBuilder();
+        sb.append("Appliance:\n");
+        for (String appliance : applianceList) {
+            sb.append("\t").append(appliance).append(";\n");
+        }
+        return sb.toString();
     }
 
     public Appliance(List<String> test){
