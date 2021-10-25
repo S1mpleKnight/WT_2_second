@@ -15,8 +15,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class ApplianceDAOImpl implements ApplianceDAO {
-
-	private static final String FILE_PATH = "./resources/appliances_db.txt";
+	private static final String FILE_PATH = ".\\src\\main\\resources\\appliances_db.txt";
 	private static final String GROUP_DELIMITER = ":";
 	private static final String INFO_DELIMITER = " ";
 
@@ -43,7 +42,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		List<String> resultAppliances = new ArrayList<>();
 		for (String groupItem : groupedAppliances.get(criteria.getGroupSearchName())) {
 			if (checkCriteria(criteria, groupItem)) {
-				resultAppliances.add(groupItem);
+				resultAppliances.add(groupItem.substring(0, groupItem.length() - 1));
 			}
 		}
 		return resultAppliances;
@@ -94,6 +93,7 @@ public class ApplianceDAOImpl implements ApplianceDAO {
 		Stream<String> linesStream = Files.lines(Path.of(FILE_PATH));
 		return linesStream
 				.map(line -> String.join( "",line.split(INFO_DELIMITER)))
+				.filter(line -> !line.equals(""))
 				.collect(Collectors.toList());
 	}
 }
