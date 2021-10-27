@@ -2,7 +2,13 @@ package by.bsuir.poit.wt.entity;
 
 import java.util.List;
 
+/**
+ * Supper class for all appliances
+ */
 public class Appliance {
+    /**
+     * Search results objects
+     */
     List<String> applianceList;
 
     @Override
@@ -15,7 +21,12 @@ public class Appliance {
         return sb.toString();
     }
 
-    public Appliance(List<String> test){
-        this.applianceList = test;
+    /**
+     * Constructor for the appliance
+     *
+     * @param result  list of appliances string representations
+     */
+    public Appliance(List<String> result){
+        this.applianceList = result;
     }
 }

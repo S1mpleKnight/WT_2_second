@@ -14,11 +14,32 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * This is the implementation of {@link ApplianceDAO} interface, which represent DAO layer
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
+ */
 public class ApplianceDAOImpl implements ApplianceDAO {
+	/**
+	 * Path to file with appliance information
+	 */
 	private static final String FILE_PATH = ".\\src\\main\\resources\\appliances_db.txt";
+	/**
+	 * Representation of the group delimiter symbol
+	 */
 	private static final String GROUP_DELIMITER = ":";
+	/**
+	 * Representation of the info delimiter symbol
+	 */
 	private static final String INFO_DELIMITER = " ";
 
+	/**
+	 * This function find appliances by correspond criteria
+	 *
+	 * @param 		criteria search params {@link Criteria}
+	 * @return		appliance that meets the criteria
+	 */
 	@Override
 	public Appliance find(Criteria criteria) {
 		try {
