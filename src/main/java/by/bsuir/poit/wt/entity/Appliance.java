@@ -4,6 +4,9 @@ import java.util.List;
 
 /**
  * Supper class for all appliances
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
  */
 public class Appliance {
     /**

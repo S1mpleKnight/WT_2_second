@@ -2,6 +2,9 @@ package by.bsuir.poit.wt.entity.criteria;
 
 /**
  * Container for the group criteria names
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
  */
 public final class SearchCriteria {
 

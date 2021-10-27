@@ -4,6 +4,9 @@ import by.bsuir.poit.wt.dao.impl.ApplianceDAOImpl;
 
 /**
  * Class that supply different dao
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
  */
 public final class DAOFactory {
     /**

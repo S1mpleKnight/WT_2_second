@@ -11,9 +11,11 @@ import by.bsuir.poit.wt.entity.criteria.Criteria;
  */
 public interface ApplianceDAO {
     /**
+     * Look for appliance that meets the criteria
      *
      * @param       criteria {@link Criteria} contains data to search appliance
      * @return      the appliance that meets required params
+     * @see by.bsuir.poit.wt.dao.impl.ApplianceDAOImpl
      */
     Appliance find(Criteria criteria);
 }

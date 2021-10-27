@@ -5,6 +5,9 @@ import java.util.Map;
 
 /**
  * This class describe params, that compile the search request
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
  */
 public class Criteria {
     /**

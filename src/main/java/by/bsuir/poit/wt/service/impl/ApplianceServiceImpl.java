@@ -9,6 +9,9 @@ import by.bsuir.poit.wt.service.validation.Validator;
 
 /**
  *  Implementation of the {@link ApplianceService} interface, that represent Service layer
+ *
+ * @author 		Ivan Zeliazinski
+ * @version 	1.0
  */
 public class ApplianceServiceImpl implements ApplianceService {
 
@@ -17,6 +20,8 @@ public class ApplianceServiceImpl implements ApplianceService {
 	 *
 	 * @param criteria  representation of the request params
 	 * @return 			appliance, that meets criteria
+	 * @see Criteria
+	 * @see Appliance
 	 */
 	@Override
 	public Appliance find(Criteria criteria) {
